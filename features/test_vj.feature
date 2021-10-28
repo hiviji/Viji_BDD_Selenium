@@ -1,6 +1,16 @@
-Feature: Viji Showing off BDD
+@web @duckduckgo
+Feature: DuckDuckGo Web Browsing
+  As a web surfer,
+  I want to find information online,
+  So I can learn new things and get tasks done.
 
-  Scenario: run a simple test
-     Given installed pytest-bdd
-      When i implement a test
-      Then BDD will test it for me
+  # The "@" annotations are tags
+  # One feature can have multiple scenarios
+  # The lines immediately after the feature title are just comments
+
+  Scenario: Basic DuckDuckGo Search
+    Given the DuckDuckGo home page is displayed
+    When the user searches for "panda"
+    Then results are shown for "panda"
+# Each scenario step is “glued” to a decorated Python function called a step definition. 
+# Step definitions are written in Python test modules, as shown below:

@@ -11,9 +11,8 @@
 # @then('behave will test it for us!')
 # def step_impl(context):
 #     assert context.failed is False
-
+import pytest
 import re
-
 from pytest_bdd import given, then, scenario
 
 @scenario(
@@ -22,7 +21,6 @@ from pytest_bdd import given, then, scenario
 )
 def test_multiline():
     pass
-
 
 @given(parsers.parse("I have a step with:\n{text}"), target_fixture="i_have_text")
 def i_have_text(text):
